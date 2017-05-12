@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <DefineConstants>NETSTANDARD20;NET46</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="**/*.cs" Exclude="Clustering\FastMeanShift.cs;Multiclass\Learning\GenerativeLearning.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Accord.Core\Accord.Core.Standard.csproj"/>
+    <ProjectReference Include="..\Accord.Math.Core\Accord.Math.Core.Standard.csproj"/>
+    <ProjectReference Include="..\Accord.Math\Accord.Math.Standard.csproj"/>
+    <ProjectReference Include="..\Accord.Statistics\Accord.Statistics.Standard.csproj"/>
+  </ItemGroup>
+
+</Project>

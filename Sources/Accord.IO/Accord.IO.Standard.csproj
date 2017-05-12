@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="**/*.cs" Exclude="Extensions.Matrix.cs;Extensions.Table.cs;ExcelReader.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.0-preview1-25305-02" />
+    <ProjectReference Include="..\Accord.Core\Accord.Core.Standard.csproj"/>
+  </ItemGroup>
+
+</Project>
