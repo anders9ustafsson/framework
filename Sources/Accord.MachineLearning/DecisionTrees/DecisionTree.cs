@@ -347,7 +347,7 @@ namespace Accord.MachineLearning.DecisionTrees
             return DecisionSet.FromDecisionTree(this);
         }
 
-#if !NET35
+#if !NET35 && !NETSTANDARD20
         /// <summary>
         ///   Creates an <see cref="Expression">Expression Tree</see> representation
         ///   of this decision tree, which can in turn be compiled into code.

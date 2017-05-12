@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Accord.Core\Accord.Core.Standard.csproj"/>
+    <ProjectReference Include="..\Accord.Math\Accord.Math.Standard.csproj"/>
+    <ProjectReference Include="..\Accord.Math.Core\Accord.Math.Core.Standard.csproj"/>
+    <ProjectReference Include="..\Accord.Statistics\Accord.Statistics.Standard.csproj"/>
+  </ItemGroup>
+
+</Project>
