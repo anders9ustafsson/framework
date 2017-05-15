@@ -4,19 +4,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="**/*.cs" Exclude="AForge.Imaging\Filters\Transform\RotateNearestNeighbor.cs" />
-  </ItemGroup>
-  
-  <ItemGroup>
     <PackageReference Include="CoreCompat.System.Drawing.v2" Version="5.2.0-preview1-r131" />
     <ProjectReference Include="..\Accord.Core\Accord.Core.Standard.csproj"/>
+    <ProjectReference Include="..\Accord.Imaging\Accord.Imaging.Standard.csproj"/>
     <ProjectReference Include="..\Accord.Math\Accord.Math.Standard.csproj"/>
-    <ProjectReference Include="..\Accord.Math.Core\Accord.Math.Core.Standard.csproj"/>
-    <ProjectReference Include="..\Accord.Statistics\Accord.Statistics.Standard.csproj"/>
   </ItemGroup>
 
 </Project>
