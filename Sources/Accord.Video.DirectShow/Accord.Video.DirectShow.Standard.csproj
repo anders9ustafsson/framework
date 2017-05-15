@@ -5,18 +5,17 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="**/*.cs" Exclude="AForge.Imaging\Filters\Transform\RotateNearestNeighbor.cs" />
+    <Compile Include="**/*.cs" Exclude="VideoCaptureDeviceForm.cs;VideoCaptureDeviceForm.Designer.cs" />
+    <EmbeddedResource Include="**/*.resx" Exclude="VideoCaptureDeviceForm.resx" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="CoreCompat.System.Drawing.v2" Version="5.2.0-preview1-r131" />
-    <ProjectReference Include="..\Accord.Core\Accord.Core.Standard.csproj"/>
-    <ProjectReference Include="..\Accord.Math\Accord.Math.Standard.csproj"/>
-    <ProjectReference Include="..\Accord.Math.Core\Accord.Math.Core.Standard.csproj"/>
-    <ProjectReference Include="..\Accord.Statistics\Accord.Statistics.Standard.csproj"/>
+    <ProjectReference Include="..\Accord.Video\Accord.Video.Standard.csproj"/>
   </ItemGroup>
 
 </Project>
