@@ -308,7 +308,7 @@ namespace Accord.Tests.Statistics
         }
 
         [Test]
-        [ExpectedException(ExpectedMessage = "The cache is not using a LRU list.")]
+        [ExpectedException(typeof(InvalidOperationException))]
         public void KernelFunctionCacheConstructorTest8()
         {
             double[][] inputs =

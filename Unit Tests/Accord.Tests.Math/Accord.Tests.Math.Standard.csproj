@@ -9,7 +9,12 @@
     <DefineConstants>NETSTANDARD20</DefineConstants>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Accord.snk</AssemblyOriginatorKeyFile>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="**/*.cs;..\ExpectedExceptionAttribute.cs;..\Program.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="Resources\constraintMatrix11_15_2.csv" />

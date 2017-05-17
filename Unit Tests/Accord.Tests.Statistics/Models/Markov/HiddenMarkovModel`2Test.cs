@@ -1140,7 +1140,7 @@ namespace Accord.Tests.Statistics
         }
 
         [Test]
-        [ExpectedException(ExpectedException = typeof(ArgumentException))]
+        [ExpectedException(typeof(ArgumentException))]
         public void LearnTest_EmptySequence()
         {
             double[][] sequences =
@@ -1230,7 +1230,7 @@ namespace Accord.Tests.Statistics
 
         [Test]
         [Category("Intensive")]
-        [Ignore]
+        [Ignore("Intensive")]
         public void BigSampleLearnTest13()
         {
             Accord.Math.Random.Generator.Seed = 0;

@@ -3,7 +3,7 @@ using System.Reflection;
 using NUnit.Common;
 using NUnitLite;
 
-namespace Accord.Tests.Core
+namespace Accord.Tests
 {
     public static class Program
     {

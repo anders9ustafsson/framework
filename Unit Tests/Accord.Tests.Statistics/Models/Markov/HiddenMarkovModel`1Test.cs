@@ -1391,7 +1391,7 @@ namespace Accord.Tests.Statistics
 
         [Test]
         [Category("Intensive")]
-        [Ignore]
+        [Ignore("Intensive")]
         public void BigSampleLearnTest13()
         {
             Accord.Math.Random.Generator.Seed = 0;

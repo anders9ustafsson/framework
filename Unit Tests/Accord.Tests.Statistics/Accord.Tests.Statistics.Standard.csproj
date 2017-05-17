@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>Accord.Tests.Statistics</AssemblyName>
+    <RootNamespace>Accord.Tests.Statistics</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Accord.snk</AssemblyOriginatorKeyFile>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="**/*.cs;..\ExpectedExceptionAttribute.cs;..\Program.cs" 
+            Exclude="Analysis\KernelPrincipalComponentAnalysisTest.cs;Distributions\Multivariate\MultivariateMixtureDistributionTest.cs;Filters\CodificationFilterTest.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\CircleWithWeights.xls" />
+    <None Include="Resources\ica_data.dat" />
+    <None Include="Resources\examples.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\hsbdemo.csv" />
+    <None Include="Resources\intrusion.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\lr_3.2.3.bin" />
+    <None Include="Resources\sample.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\sample.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\iris.scale.txt" />
+    <None Include="Resources\logreg.txt" />
+    <None Include="Resources\linreg.txt" />
+    <None Include="Resources\regression.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnitLite" Version="3.6.1" />
+    <PackageReference Include="NUnit" Version="3.6.1" />
+    <ProjectReference Include="..\..\Sources\Accord.Core\Accord.Core.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.IO\Accord.IO.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.Math.Core\Accord.Math.Core.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.Math\Accord.Math.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.Neuro\Accord.Neuro.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.Statistics\Accord.Statistics.Standard.csproj"/>
+  </ItemGroup>
+
+</Project>

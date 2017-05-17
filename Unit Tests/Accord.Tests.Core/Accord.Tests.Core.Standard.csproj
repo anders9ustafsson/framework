@@ -8,7 +8,12 @@
     <AssemblyName>Accord.Tests.Core</AssemblyName>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Accord.snk</AssemblyOriginatorKeyFile>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="**/*.cs;..\Program.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="NUnitLite" Version="3.6.1" />
