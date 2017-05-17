@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>Accord.Tests.Math</AssemblyName>
+    <RootNamespace>Accord.Tests.Math</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <DefineConstants>NETSTANDARD20;NET46</DefineConstants>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Accord.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Resources\constraintMatrix11_15_2.csv" />
+    <None Include="Resources\constraintMatrix11_15.csv" />
+    <None Include="Resources\constraintMatrix11_15_3.csv" />
+    <None Include="Resources\constraints11_14_2.csv" />
+    <None Include="Resources\constraints11_14.csv" />
+    <None Include="Resources\constraints11_14_3.csv" />
+    <None Include="Resources\dmatFull.csv" />
+    <None Include="Resources\mat\a64.mat" />
+    <None Include="Resources\mat\bigsparse.mat" />
+    <None Include="Resources\mat\cell.mat" />
+    <None Include="Resources\mat\int32.mat" />
+    <None Include="Resources\mat\int64.mat" />
+    <None Include="Resources\mat\int8.mat" />
+    <None Include="Resources\mat\java.mat" />
+    <None Include="Resources\mat\logical.mat" />
+    <None Include="Resources\mat\matnativedouble.mat" />
+    <None Include="Resources\mat\matnativedouble2.mat" />
+    <None Include="Resources\mat\nan.mat" />
+    <None Include="Resources\mat\object.mat" />
+    <None Include="Resources\mat\simplestruct.mat" />
+    <None Include="Resources\mat\single.mat" />
+    <None Include="Resources\mat\sparse.mat" />
+    <None Include="Resources\mat\uint32.mat" />
+    <None Include="Resources\mat\uint64.mat" />
+    <None Include="Resources\mat\uint8.mat" />
+    <None Include="Resources\pseudoInverse1.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnitLite" Version="3.6.1" />
+    <PackageReference Include="NUnit" Version="3.6.1" />
+    <ProjectReference Include="..\..\Sources\Accord.Core\Accord.Core.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.IO\Accord.IO.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.Math.Core\Accord.Math.Core.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.Math\Accord.Math.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.Statistics\Accord.Statistics.Standard.csproj"/>
+  </ItemGroup>
+
+</Project>

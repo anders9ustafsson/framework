@@ -170,6 +170,7 @@ namespace Accord.Tests.Math
             };
         }
 
+#if !NETSTANDARD20
         [Test]
         [ExpectedException(typeof(InvalidOperationException))]
         public void NoFunctionTest()
@@ -178,6 +179,7 @@ namespace Accord.Tests.Math
 
             target.Minimize();
         }
+#endif
 
         [Test]
         public void NoGradientTest()
@@ -192,6 +194,7 @@ namespace Accord.Tests.Math
             // The optimizer should use finite differences as the gradient
         }
 
+#if !NETSTANDARD20
         [Test]
         [ExpectedException(typeof(InvalidOperationException))]
         public void WrongGradientSizeTest()
@@ -217,6 +220,7 @@ namespace Accord.Tests.Math
 
             target.Minimize();
         }
+#endif
 
         [Test]
         public void ConstructorTest1()

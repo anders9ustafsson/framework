@@ -81,7 +81,9 @@ namespace Accord.Tests.Math
 
         [TestCase(0, 0, 1, 0, 0, 1, 1, 1, 0, 0, false)]
         [TestCase(0, 0, 0, 1, 1, 0, 1, 1, 0, 0, false)]
+#if !NETSTANDARD20
         [TestCase(0, 0, 1, 1, 0, 0, 1, 1, 0, 0, false, ExpectedException = typeof(InvalidOperationException))]
+#endif
         [TestCase(0, 0, 1, 1, 0, 1, 1, 2, 0, 0, false)]
         [TestCase(0, 0, 1, 0, 0, 0, 1, 1, 0, 0, true)]
         [TestCase(0, 0, 1, 0, 0, 1, 1, 2, -1, 0, true)]
