@@ -246,7 +246,7 @@ namespace Accord.Tests.MachineLearning
                 Assert.AreEqual(expected, actual);
             }
 
-#if !NET35
+#if !NET35 && !NETSTANDARD20
             #region doc_nursery_native
             // Finally, we can also convert our tree to a native
             // function, improving efficiency considerably, with
@@ -571,7 +571,7 @@ Iris-virginica =: (petal length > 2.45) && (petal width > 1.75) && (sepal length
             Assert.AreEqual(expected, ruleText);
         }
 
-        [Test, Timeout(30 * 1000)]
+        [Test, MaxTime(30 * 1000)]
         public void iris_new_method_create_tree()
         {
             string[][] text = Resources.iris_data.Split(new[] { "\r\n" },

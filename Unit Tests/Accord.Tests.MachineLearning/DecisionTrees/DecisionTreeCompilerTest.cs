@@ -47,7 +47,7 @@ namespace Accord.Tests.MachineLearning
 
 
 
-#if !NET35
+#if !NET35 && !NETSTANDARD20
         [Test]
         public void CreateTest()
         {

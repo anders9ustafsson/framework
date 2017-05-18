@@ -315,6 +315,7 @@ namespace Accord.Tests.MachineLearning
             }
         }
 
+#if !NETSTANDARD20
         [Test]
         [Category("Office")]
         public void GaussianMixtureModelTest5()
@@ -361,7 +362,7 @@ namespace Accord.Tests.MachineLearning
             Assert.IsFalse(gmm.Gaussians[0].Mean.HasNaN());
             Assert.IsFalse(gmm.Gaussians[1].Mean.HasNaN());
         }
-
+#endif
 
 
         [Test]
@@ -380,7 +381,7 @@ namespace Accord.Tests.MachineLearning
             }
         }
 
-        [Test, Ignore]
+        [Test, Ignore("Large")]
         public void LargeSampleTest()
         {
             Accord.Math.Tools.SetupGenerator(0);

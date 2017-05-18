@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>Accord.Tests.MachineLearning</AssemblyName>
+    <RootNamespace>Accord.Tests.MachineLearning</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <DefineConstants>NETSTANDARD20</DefineConstants>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Accord.snk</AssemblyOriginatorKeyFile>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="**/*.cs;..\ExpectedExceptionAttribute.cs;..\Program.cs;..\..\Samples\MachineLearning\Liblinear %28SVMs%29\Parameters.cs;..\..\Samples\MachineLearning\Liblinear %28SVMs%29\Problem.cs;..\..\Samples\MachineLearning\Liblinear %28SVMs%29\Train.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Include="Resources\iris.data.txt" />
+    <Content Include="Resources\iris.scale.txt" />
+    <Content Include="Resources\liblinear\L1R_LR_a9a.txt" />
+    <Content Include="Resources\liblinear\L1R_LR_DUAL_a9a.txt" />
+    <Content Include="Resources\liblinear\L2R_LR_a9a.txt" />
+    <None Include="Resources\rforest\features.csv" />
+    <None Include="Resources\kmeans.bin" />
+    <None Include="Resources\liblinear\a9a.test">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\liblinear\a9a.train">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\CircleWithWeights.xls" />
+    <None Include="Resources\ml-svm.bin" />
+    <None Include="Resources\mnist\pca_mnist.bin" />
+    <None Include="Resources\mnist\pca_mnist_v3_1.bin" />
+    <None Include="Resources\mnist\t10k-images-idx3-ubyte.gz" />
+    <None Include="Resources\mnist\t10k-labels-idx1-ubyte.gz" />
+    <None Include="Resources\mnist\train-images-idx3-ubyte.gz" />
+    <None Include="Resources\mnist\train-labels-idx1-ubyte.gz" />
+    <None Include="Resources\nb.bin" />
+    <None Include="Resources\nb2.bin" />
+    <None Include="Resources\nursery.data">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\svm2.svm" />
+    <None Include="Resources\rforest\times.csv" />
+    <None Include="Resources\trainingsample.csv" />
+    <None Include="Resources\tree.bin" />
+    <None Include="Resources\validationsample.csv" />
+    <None Include="Resources\svm1.svm" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnitLite" Version="3.6.1" />
+    <PackageReference Include="NUnit" Version="3.6.1" />
+    <ProjectReference Include="..\..\Sources\Accord.Core\Accord.Core.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.DataSets\Accord.DataSets.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.IO\Accord.IO.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.MachineLearning\Accord.MachineLearning.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.Math.Core\Accord.Math.Core.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.Math\Accord.Math.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.Neuro\Accord.Neuro.Standard.csproj"/>
+    <ProjectReference Include="..\..\Sources\Accord.Statistics\Accord.Statistics.Standard.csproj"/>
+  </ItemGroup>
+
+</Project>

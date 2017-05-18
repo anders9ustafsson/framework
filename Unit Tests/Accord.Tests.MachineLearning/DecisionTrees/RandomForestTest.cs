@@ -41,7 +41,7 @@ namespace Accord.Tests.MachineLearning
     public class RandomForestTest
     {
 
-        [Test, Ignore]
+        [Test, Ignore("Large")]
         public void constructor_test()
         {
             var times = ReadCSV(Properties.Resources.times);

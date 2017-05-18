@@ -36,7 +36,7 @@ namespace Accord.Tests.MachineLearning
     public class TSNETest
     {
 
-        [Test, Ignore]
+        [Test, Ignore("Large")]
         public void ConstructorTest()
         {
             Accord.Math.Random.Generator.Seed = 0;
