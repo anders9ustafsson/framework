@@ -384,7 +384,7 @@ namespace Accord.Tests.IO
             Assert.IsTrue(expected.IsEqual(actual));
         }
 
-        [Test, Ignore]
+        [Test, Ignore("Invalid")]
         public void CsvReader_Comma()
         {
             string text = "\n"
